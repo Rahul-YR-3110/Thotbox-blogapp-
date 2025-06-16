@@ -1,14 +1,13 @@
 import Signin from './pages/signin.jsx'
-import './CSS/App.css'
-import { Route,Routes } from 'react-router-dom'
 import Signup from './pages/signup.jsx'
 import MainPage from './pages/main.jsx'
+import './CSS/App.css'
+import { Route,Routes } from 'react-router-dom'
 function App() {
   return (
     <>
     <div>
-     
-      <main>
+      <main className='main-content'>
         <Routes>
         <Route path='/' element={<Signin />}></Route>
         <Route path='/signup' element={<Signup />}></Route>

@@ -1,4 +1,4 @@
-import "../CSS/signin.css"
+
 import { Link } from 'react-router-dom';
 function Signin(){
     return(
@@ -10,14 +10,12 @@ function Signin(){
                 <input type="Text"></input>
                 <h3>Password:</h3>
                 <input></input><br></br>
-                <button>Submit</button>
-                <p>wanna create an account 
-                  <Link to='/signup'>signup</Link>
+                <Link to="/MainPage">Submit</Link>
+                <p>wanna create an account
+                  <Link to='/signup'>  Signup</Link>
                 </p>
             </center>
         </div>
-        
-        
         </>
     )
 }

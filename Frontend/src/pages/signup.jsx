@@ -9,8 +9,7 @@ function Signup (){
                 <h3>Password:</h3>
                 <input></input><br></br>
                 <h3>confirmPassword:</h3>
-                <input></input><br></br>
-                <button>Submit</button> 
+                <input></input><br></br> 
                 <Link to='/'>back</Link>
             </center>
         </div>
