@@ -1,0 +1,9 @@
+.onethot{
+background-color: #ebeaea;
+}
+.buttons{
+    display: flex;
+}
+.like{
+    width: 20px;
+}
