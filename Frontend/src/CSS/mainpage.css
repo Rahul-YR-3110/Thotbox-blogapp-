@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.Thotmap {
+margin: 10px;
+border-color:black;
+}
+
+.Thotmap1 {
+margin: 10px;
+border: 10px;
+border-color:aquamarine;
+}
+
 .search-form {
   max-width: 600px;
   margin: 0 auto 2rem;

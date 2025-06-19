@@ -20,9 +20,9 @@ function MainPage(){
                 <input type="text" placeholder="search for Thots" className="search-input" value={search} onChange={(e) => setSearch(e.target.value)}></input>
                 <button type="submit" className="search-button">search</button>
             </form>
-            <div>
+            <div class="Thotmap">
                 {Thots.map((thots)=>(
-                <Thot thot={thots}></Thot>))}
+                <Thot  class="Thotmap1" thot={thots}></Thot>))}
             </div>
         </div>        
         </>

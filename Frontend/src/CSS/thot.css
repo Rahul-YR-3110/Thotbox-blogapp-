@@ -1,14 +1,29 @@
 .buttons{
     display: flex;
 }
-.like{
-    width: 20px;
+.like1{
+   margin-right:5px;
 }
+
+.comment1{
+   margin-right:5px;
+}
+
+.p1 {
+  margin-top:8px;
+  margin-right:5px;
+}
+
+.p2 {
+  margin-top:8px;
+  margin-right:5px;
+}
+
 .thot{
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color:white;
   transition: transform 0.2s;
   height: 100%;
   display: flex;
@@ -16,8 +31,7 @@
   margin-bottom:10px;
   padding-left: 10px;
 }
+
 .thot:hover{
   transform: translateY(5px);
-}
-
-
+} 

@@ -8,11 +8,12 @@ function Thot({thot}){
     return(
         <>
         <div className="thot">
-            <h2>@{thot.Username}</h2>
-            <h3>{thot.title}</h3>
+            <h3>@{thot.Username}</h3>
+            <h2>{thot.title}</h2>
             <p>{thot.description}</p>
+            <br></br>
             <div className="button-overlay">
-                <div className="buttons"><button onClick={liked}>like</button><p>{thot.likecount}</p> <button onClick={Comment}>comment</button> <p>{thot.commentcount}</p></div>
+                <div className="buttons"><button class="like1" onClick={liked}>like</button><p class="p1">{thot.likecount}</p> <button class="comment1" onClick={Comment}>comment</button> <p class="p2">{thot.commentcount}</p></div>
             </div>
         </div>
         </>
