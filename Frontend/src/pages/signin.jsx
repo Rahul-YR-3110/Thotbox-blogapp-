@@ -1,22 +1,25 @@
-
 import { Link } from 'react-router-dom';
-function Signin(){
-    return(
+import '../CSS/Signin.css';
+
+function Signin() {
+    return (
         <>
-        <div className="kk">
-            <center>
-                <h1 className="header">Signin</h1>
+            <div className="signin-container">
+                <h1>Signin</h1>
                 <h3>Username:</h3>
-                <input type="Text"></input>
+                <input type="text" />
                 <h3>Password:</h3>
-                <input></input><br></br>
-                <Link to="/MainPage">Submit</Link>
-                <p>wanna create an account
-                  <Link to='/signup'>  Signup</Link>
+                <input type="password" /><br />
+                <center>
+                    <Link to="/Home" className="submit-link">Submit</Link>
+                </center>
+                
+                <p>
+                    Don't have an account <Link to='/signup' className='signup-link'>Signup</Link>
                 </p>
-            </center>
-        </div>
+            </div>
         </>
-    )
+    );
 }
-export default Signin
+
+export default Signin;
