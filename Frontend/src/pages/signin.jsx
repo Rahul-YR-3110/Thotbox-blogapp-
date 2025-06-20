@@ -4,6 +4,12 @@ import '../CSS/Signin.css';
 function Signin() {
     return (
         <>
+            <center>
+                <div className='icondiv'>
+                    <h1 className='thotboxspell'>THOTBOX</h1> <img src="/src/assets/thotboxicon.png" />
+            </div>
+            </center>
+            
             <div className="signin-container">
                 <h1>Signin</h1>
                 <h3>Username:</h3>

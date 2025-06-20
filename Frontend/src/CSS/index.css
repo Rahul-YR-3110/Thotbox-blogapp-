@@ -23,7 +23,7 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #121212;  /* ✅ Locks dark background */
+  background-color: #121212;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color-scheme: only dark;

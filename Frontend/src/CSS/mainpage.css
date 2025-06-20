@@ -3,3 +3,12 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.addicon{
+  font-size: 50px;
+}
+.addbutton{
+  margin-right: 40px;
+  border-radius: 10px;
+  width:200px;
+}

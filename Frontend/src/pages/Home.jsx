@@ -3,11 +3,19 @@ import "../CSS/mainpage.css"
 import NavBar from '../components/navbar.jsx'
 import { useState } from "react";
 import SearchBar from "../components/searchbar.jsx";
+import { useNavigate } from "react-router-dom";
 function MainPage(){
-    const Thots=[{Username:"Rahul",title:"My Life sucks",description:"Australia lost the WTC final and i am willing to secide as it is my best practice to do and madrid also lost its UCL ",likecount:40,commentcount:50},
-                {Username:"Rahul",title:"My Life sucks",description:"Madrid lost the UCL quater final",likecount:40,commentcount:50},
-                {Username:"Manideep",title:"I am a good boy", description:"I am a good boy",likecount:40,commentcount:50},
-                {Username:"Manideep",title:"I am a good boy", description:"I am a good boy",likecount:40,commentcount:50}]
+    const navigate = useNavigate();
+    const handleaddthot = () => {
+    navigate(`/addthot`);
+  };
+    const Thots = [
+  { id: 1, Username: "Rahul", title: "My Life sucks", description: "Australia lost the WTC final...", likecount: 40, commentcount: 50,comments:{1:"this is painful",2:"i am also sad",3:"this is gross"} },
+  { id: 2, Username: "Rahul", title: "Madrid lost", description: "Madrid lost the UCL quarter final", likecount: 40, commentcount: 50 },
+  { id: 3, Username: "Manideep", title: "I am a good boy", description: "I am a good boy", likecount: 40, commentcount: 50 },
+  { id: 4, Username: "Manideep", title: "Still good", description: "Still a good boy", likecount: 40, commentcount: 50 },
+];
+
 
     const handleSearch=(e)=>{
         e.preventDefault()
@@ -18,7 +26,15 @@ function MainPage(){
         <>
         <NavBar />
         <div className="Home">
-            <SearchBar search={search} setSearch={setSearch} handleSearch={handleSearch} />
+                <SearchBar search={search} setSearch={setSearch} handleSearch={handleSearch} />
+                <center>
+                   <button className="addbutton" onClick={handleaddthot}>
+                        <p className="addicon">+</p>
+                        Add your thot
+                        </button>
+                </center>
+                
+            
             <div>
                 {Thots.map((thots)=>(
                 <Thot thot={thots}></Thot>))}

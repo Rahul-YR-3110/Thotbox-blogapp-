@@ -1,4 +1,4 @@
-.signin-container {
+.addthotcontainer{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,34 +7,36 @@
     background-color: #1e1e1e;
     padding: 39px;
     border-radius: 12px;
-    width: 350px;
+    width: 800px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     gap:10px;
 }
-
-.signin-container h3 {
-    font-size: 16px;
-}
-
-.signin-container input {
+.titleinput{
     padding: 10px;
     background-color: #2b2b2b;
     border: 1px solid #ffffff;
     border-radius: 6px;
-    border-color: #b2b2b2;
+    border-color: #5c5c5c;
     color: white;
    transition:border-color 0.2s ease;
 }
-
-.signin-container input:focus {
+.titleinput:focus{
     outline: none;
-    border-color: #910000;
-    background-color: #333;
+    border-color: #5e0000;
+}
+.describeinput{
+height: 100px;
+resize: none;
+border-color: #5c5c5c;
+}
+.describeinput:focus{
+    border-color:#5e0000;
+    outline: none;
 }
 
-.submit-link {
+.submit-button{
     background-color: #ff0000;
     color: white;
     padding: 10px;
@@ -43,27 +45,7 @@
     display: block;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    text-decoration: none;
 }
-
-.submit-link:hover {
-    background-color: #cc0000;
-}
-.signup-link{
-    text-decoration: none;
-}
-.signup-link:hover{
-    text-decoration: underline;
-}
-.icondiv{
-    display: flex;
-    margin-left: 600px;
-    margin-top: 65px;
-}
-.icondiv img{
-    width:50px
-}
-.thotboxspell{
-    margin-right: 20px;
-    font-size: 50px;
+.submit-button:hover{
+    background-color: #5e0000;
 }
