@@ -33,7 +33,7 @@ function ThotPage() {
                 )}
             </div>
             <input placeholder="Add a comment"></input>
-            <button className="comment-click">click to add the comment</button>
+            <button className="comment-click">click to add your comment</button>
             
         </div>
       
