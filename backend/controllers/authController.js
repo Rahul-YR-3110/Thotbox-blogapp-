@@ -22,12 +22,12 @@ exports.signin=async(req,res)=> {
     try {
         const user=await User.findOne({username:username});
         if(!user||!(await bcrypt.compare(password,user.password))) {
-            return res.status(401).send({error:'Invalid username or password'})
+            return res.status(401).send({message:'Invalid username or password'})
         }
         const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:'1d'});
         res.json({token,user:{id:user._id,username:user.username}})
     } catch(err) {
         console.error('Invalid Credentials',err.message);
-        return res.status(400).send({ error: 'Invalid Credentials' });
+        return res.status(400).send({ message: 'Invalid Credentials' });
     }
 }

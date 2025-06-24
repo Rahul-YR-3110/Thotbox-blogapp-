@@ -2,7 +2,7 @@ import Signin from './pages/signin.jsx'
 import Signup from './pages/signup.jsx'
 import MainPage from './pages/Home.jsx'
 import ThotPage from './pages/thotpage.jsx'
-import Addthot from './components/addthot.jsx'
+import Addthot from './pages/addthot.jsx'
 import './CSS/App.css'
 import { Route,Routes } from 'react-router-dom'
 function App() {

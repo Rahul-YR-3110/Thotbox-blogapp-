@@ -1,11 +1,12 @@
 const Thot=require('../models/thotmodel');
-
+const User=require('../models/usermodel');
 exports.createThot=async(req,res)=> {
     const title=req.body.title;
-    const username=req.body.username;
+
     const description=req.body.description;
     try {
-        const newthot=new Thot({userId:req.user,title:title,username:username,description:description})
+        const user=await User.findById(req.user)
+        const newthot=new Thot({userId:req.user,title:title,username:user.username,description:description})
         const saveThot=await newthot.save();
         return res.status(201).send({newthot:saveThot})
         } catch(error) {
