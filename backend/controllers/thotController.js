@@ -15,6 +15,16 @@ exports.createThot=async(req,res)=> {
         }
 }
 
+exports.getMythots=async(req,res)=> {
+  try {
+    const thots=await Thot.find({userId:req.user})
+    return res.status(200).send({thots:thots})
+    } catch(error) {
+        console.error('Error fetching thots:', error.message);
+        return res.status(500).send({ error: 'Error fetching thots' })
+    }
+}
+
 
 exports.getAllThots=async(req,res)=> {
     try {
