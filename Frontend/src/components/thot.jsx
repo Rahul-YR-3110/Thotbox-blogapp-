@@ -12,7 +12,7 @@ function Thot({thot}){
     return(
         <>
         <div className="thot" onClick={handleClick} style={{ cursor: "pointer" }}>
-            <h2>@{thot.Username}</h2>
+            <h2>@{thot.username}</h2>
             <h3>{thot.title}</h3>
             <p>{thot.description}</p>
             <div className="buttons"><button onClick={liked}>like</button><p>{thot.likecount}</p> <button onClick={handleClick}>comment</button> <p>{thot.commentcount}</p></div>

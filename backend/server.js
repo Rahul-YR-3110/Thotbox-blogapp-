@@ -1,4 +1,6 @@
-const express=require("express");
+const express=require('express');
+const cors=require('cors');
+const authenticate=require('./middleware/authMiddleware');
 require('dotenv').config();
 const mongoConnection = require('./mongo');
 const app=express();
@@ -6,7 +8,12 @@ const thotRouter = require('./routes/thot');
 const authRouter=require('./routes/auth');
 app.use(express.json()); 
 
-app.use('/thots',thotRouter);
+app.use(cors( {
+  origin:'http://localhost:5173',
+  credentials:true
+}))
+
+app.use('/thots',authenticate,thotRouter);
 app.use('/auth',authRouter);
 
 const PORT=process.env.PORT||3000
