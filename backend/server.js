@@ -9,7 +9,7 @@ const authRouter=require('./routes/auth');
 app.use(express.json()); 
 
 app.use(cors( {
-  origin:'http://localhost:5173',
+  origin:'https://thotbox-frontend.vercel.app/',
   credentials:true
 }))
 
