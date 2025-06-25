@@ -7,6 +7,7 @@ import Profile from './pages/Profile.jsx'
 import Addthot from './pages/addthot.jsx'
 import DeleteThot from './pages/deleteThot.jsx'
 import './CSS/App.css'
+import { useParams } from "react-router-dom"
 import { Route,Routes } from 'react-router-dom'
 function App() {
   return (

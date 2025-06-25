@@ -4,12 +4,12 @@ const {createThot,getAllThots,getThotById,updateThot,deleteThot,addComment,like,
 const router = express.Router();
 
 router.post('/addthot',auth,createThot);
-router.get('/Home',getAllThots);
-router.get('/Home/Profile',getMythots);
-router.get('/Home/:id',getThotById);
-router.patch('/Home/Profile/update/:id',updateThot);
-router.delete('/Home/Profile/delete/:id',deleteThot);
-router.put('/Home/:id',addComment);
-router.patch('/Home/:id',like);
+router.get('/Home',auth,getAllThots);
+router.get('/Home/Profile',auth,getMythots);
+router.get('/Home/:id',auth,getThotById);
+router.patch('/Home/Profile/update/:id',auth,updateThot);
+router.delete('/Home/Profile/delete/:id',auth,deleteThot);
+router.patch('/Home/:id',auth,addComment);
+router.patch('/Home/Like/:id',auth,like);
 
 module.exports=router;

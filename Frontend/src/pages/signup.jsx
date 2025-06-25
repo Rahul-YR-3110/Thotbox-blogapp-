@@ -1,7 +1,6 @@
 import { Link,useNavigate} from "react-router-dom"
 import {useState} from 'react'
 import "../CSS/signup.css"
-import { useNavigate } from "react-router-dom";
 function Signup (){
     const [username,setUsername]=useState("")
     const [errorMsg,setErrorMsg]=useState("")
@@ -43,9 +42,9 @@ function Signup (){
                 <h3>Username:</h3>
                 <input type="Text" value={username} onChange={e=>setUsername(e.target.value)}></input>
                 <h3>Password:</h3>
-                <input type="text" value={password} onChange={e=>setpassword(e.target.value)}></input><br></br>
+                <input type="password" value={password} onChange={e=>setpassword(e.target.value)}></input><br></br>
                 <h3>Confirm Password:</h3>
-                <input value={confPassword} onChange={e=>setconfPassword(e.target.value)}></input><br></br> 
+                <input type="password" value={confPassword} onChange={e=>setconfPassword(e.target.value)}></input><br></br> 
                 <button type="Submit" className="submit-links">Submit</button>
                 <Link to='/'>back</Link> 
                 </form>

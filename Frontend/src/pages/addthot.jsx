@@ -34,15 +34,15 @@ function Addthot(){
     return(
         <>
         <NavBar></NavBar>
-        <div className="addthotcontainer">
-            <form onSubmit={handleaddThot}>
+        <div >
+            <form onSubmit={handleaddThot} className="addthotcontainer">
             <h2>Title of your thot</h2>
             <input className="titleinput" value={title} onChange={e=>setTitle(e.target.value)}></input>
             <h2>Describe your thot</h2>
             <textarea className="describeinput" value={description} onChange={e=>setDescription(e.target.value)} ></textarea>
             <button type="Submit" className="submit-button">Submit</button>
+             <p>{errMsg}</p>
             </form>
-            <p>{errMsg}</p>
         </div>
         </>
     )

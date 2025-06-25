@@ -1,0 +1,8 @@
+.deletepage {
+  width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}

@@ -1,4 +1,5 @@
 import { useLocation, useParams } from "react-router-dom";
+import Comment from "../components/comment"
 import NavBar from "../components/navbar";
 import "../CSS/thotpage.css";
 function ThotPage() {
@@ -12,7 +13,7 @@ function ThotPage() {
     <>
         <NavBar/>
         <div className="thot-page">
-            <h2>@{thot.Username}</h2>
+            <h2>@{thot.username}</h2>
             <h3>{thot.title}</h3>
             <p>{thot.description}</p>
         <div className="likescomments">
@@ -20,21 +21,18 @@ function ThotPage() {
             <p>{thot.commentcount}💬</p>
         </div>
         
-        <div>
-                <h3>Comments:</h3>
-                {thot.comments ? (
-                <div className="comments-section">
-                    {Object.entries(thot.comments).map(([key, comment]) => (
-                        <p key={key}>"{comment}"</p>
-                    ))}
-                </div>
-                ) : (
-                <p>No comments yet.</p>
-                )}
-            </div>
-            <input placeholder="Add a comment"></input>
-            <button className="comment-click">click to add your comment</button>
-            
+          <div>
+            <h3>Comments:</h3>
+        {thot && thot.comments && thot.comments.length > 0 ? (
+              <div className="comments-section">
+                {thot.comments.map((commentObj, index) => (
+            <p key={index}>{commentObj.comment}</p>
+        ))}   </div>
+        ) : (
+              <p>No comments yet.</p>
+          )}
+          </div>
+                <Comment/>
         </div>
       
     </>

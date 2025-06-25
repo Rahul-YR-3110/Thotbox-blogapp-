@@ -40,9 +40,10 @@ function Signin() {
             </div>
             </center>
             
-            <div className="signin-container">
+            <div >
+                
+                <form onSubmit={handleSignin} className="signin-container">
                 <h1>Signin</h1>
-                <form onSubmit={handleSignin}>
                 <h3>Username:</h3>
                 <input type="text" value={username} onChange={e=>setUsername(e.target.value)}/>
                 <h3>Password:</h3>
@@ -50,11 +51,12 @@ function Signin() {
                 <center>
                    <button type="Submit" className="submit-link">Submit</button>
                 </center>
-                </form>
-                <p>{errorMsg}</p>
+                 <p>{errorMsg}</p>
                 <p>
                     Don't have an account <Link to='/signup' className='signup-link'>Signup</Link>
                 </p>
+                </form>
+               
             </div>
         </>
     );

@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
+import "../CSS/delete.css"
 function DeleteThot() {
   const location = useLocation();
   const { thot } = location.state || {};
@@ -36,11 +36,16 @@ function DeleteThot() {
   };
 
   return (
-    <>
-      <h1>Do You Want to Delete This Thot?</h1>
-      <button onClick={() => handleyes(thot._id)}>Yes</button>
-      <button onClick={handleno}>No</button>
-    </>
+    <div className="deletepage">
+    <center>
+      <h2>Do You Want to Delete This Thot?</h2><br></br>
+      <div style={{ justifyContent: 'center'}}>
+      
+      <button style={{  justifyContent: 'center' ,marginLeft:"-5px",padding:"15px",paddingLeft:"20px",paddingRight:"20px"}} onClick={() => handleyes(thot._id)}>Confirm</button>
+      <button style={{  justifyContent: 'center',marginLeft:"65px",padding:"15px",paddingLeft:"20px",paddingRight:"20px"}} onClick={handleno}>Cancel</button>
+      </div>
+      </center>
+    </div>
   );
 }
 

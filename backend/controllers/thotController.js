@@ -74,9 +74,10 @@ exports.deleteThot=async(req,res)=> {
 
 exports.addComment=async(req,res)=> {
     try {
-    const {comment}=req.body;
+   const user=await User.findById(req.user)
+   console.log("user:",user)
     const thot=await Thot.findById(req.params.id);
-    thot.comments.push({comment})
+   thot.comments.push({ username: user.username, comment: req.body.comment })
     const savethot=await thot.save();
     return res.status(201).send({thot:savethot})
     } catch(error) {
@@ -96,7 +97,7 @@ exports.like = async (req, res) => {
     } else {
       thot.likes.push(userId);
     }
-
+    
     const updated = await thot.save();
     return res.status(200).send({
       message: hasLiked ? 'Unliked' : 'Liked',

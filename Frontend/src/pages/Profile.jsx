@@ -37,8 +37,11 @@ const [thots, setThots] = useState([]);
         <>
             <NavBar></NavBar>
             <div>
-               <h1>My Profile</h1> 
-                <h2>My Thots</h2>
+              <center>
+               <h1 >My Profile</h1> 
+               </center>
+                <h2 style={{marginLeft:"375px"}}>My Thots:</h2>
+                
                  {thots.map((thot)=> (
                     <MyThot thot={thot}>
 
