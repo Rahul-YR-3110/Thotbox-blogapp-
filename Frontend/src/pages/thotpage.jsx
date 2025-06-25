@@ -7,7 +7,7 @@ function ThotPage() {
   const location = useLocation();
   const { thot } = location.state || {};
 
-  if (!thot) return <p>Thot not found.</p>; // fallback if no state
+  if (!thot) return <p>Thot not found.</p>; 
 
   return (
     <>

@@ -7,7 +7,7 @@ function Signin() {
     const navigate=useNavigate()
     const [password,setpassword]=useState("")
     const handleSignin = async (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault(); 
 
     try {
       const res = await fetch('http://localhost:3000/auth/signin', {
@@ -21,9 +21,9 @@ function Signin() {
       const data = await res.json();
 
       if (res.ok) {
-        // Store token in localStorage
+        
         localStorage.setItem('token', data.token);
-        navigate('/Home'); // navigate to home page
+        navigate('/Home'); 
       } else {
         setErrorMsg(data.message || 'Signin failed');
       }

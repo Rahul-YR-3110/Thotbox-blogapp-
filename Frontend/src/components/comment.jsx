@@ -16,7 +16,7 @@ function Comment(){
           'Content-Type': 'application/json',
           'Authorization':`Bearer ${token}`
             },
-        body: JSON.stringify({ comment }) // just the string
+        body: JSON.stringify({ comment }) 
       });
       const data = await res.json();
       console.log("data:",data)
